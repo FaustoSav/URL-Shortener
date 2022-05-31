@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL - Shortening</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="shortcut icon" href="/assets/img/favicon-32x32.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="  relative overflow-x-hidden ">
+
+    <header class="relative p-4 mx-auto max-w-md self-center lg:max-w-none lg:px-36  lg:pt-10 lg:flex lg:flex-row lg:w-full  ">
+
+            <img src="/assets/img/icon-menu.svg" class="w-6 absolute right-0 mr-3 lg:hidden  " id="switch-menu" alt="hamburguer-icon">
+
+            <div class="w-20 mt-1 lg:w-48 lg:mr-8  ">
+                <img src="/assets/img/logo.svg" alt="logo">
+            </div>
+
+            <nav class="nav hidden  lg:bg-transparent lg:relative  lg:w-full lg:flex lg:flex-row lg:justify-between lg:mt-0 lg:py-0 lg:divide-none lg:mx-0 lg:text-neutral-grayViolet " id="menu">
+                <ul class="pl-0 flex flex-col items-center pb-5 space-y-4 lg:flex-row lg:pb-0  lg:space-y-0 lg:space-x-8 lg:text-base   ">
+                    <li><a href="#" class="hover:text-neutral-darkviolet">Features</a></li>
+                    <li><a href="#" class="hover:text-neutral-darkviolet">Pricing</a></li>
+                    <li><a href="#" class="hover:text-neutral-darkviolet">Resources</a></li>
+                </ul>
+
+                <div class="flex flex-col items-center pt-5 space-y-4 lg:flex-row lg:pt-0 lg:space-y-0 lg:space-x-10 lg:text-base     ">
+                    <div class=" font-medium hover:cursor-pointer">Login</div>
+                    <div class=" btn-blue font-medium lg:text-white lg:px-5 lg:text-base    ">Sign Up</div>
+                </div>
+            </nav>
+    </header>
+
+    <div class="px-4 flex lg:px-36  lg:mt-32  ">
+        <div class="flex flex-col items-center max-w-md mx-auto lg:max-w-none   lg:items-start xl:mt-16    ">
+            <img src="/assets/img/illustration-working.svg" class=" z-0  mb-24   mt-10  px-4  lg:hidden  " alt="">
+            
+            <h1 class="title  text-3xl lg:text-5xl  lg:leading-tight lg:max-w-3xl xl:text-6xl  2xl:text-7xl ">
+                More than just <br>  shorter links
+            </h1>
+            <p class="description-text lg:text-lg lg:text-left lg:mb-10 lg:mt-0  xl:text-xl xl:mt-5  xl:max-w-xl xl:leading-relaxed lg:max-w-sm ">
+                Build your brand's recognition and get detailed insights on how your link are perfoming.
+            </p>
+            <button class=" btn-blue w-auto px-6 lg:px-10 lg:py-4  lg:rounded-full "  >
+                Get Started
+            </button>
+        </div>
+
+    </div>
+
+
+    <div class="bg-neutral-bgGray pb-20 px-4 lg:mt-80    lg:px-36 lg:pb-44">
+       
+        <div id="output" class="max-w-md mx-auto lg:max-w-none lg:flex lg:flex-col lg:items-center ">
+            
+            <div class="input-container relative  lg:bg-input_desktop   lg:flex lg:flex-row w-full lg:space-x-7  lg:mx-auto lg:max-w-6xl lg:px-12 lg:py-10  lg:-translate-y-40   ">
+                <input type="url" placeholder="Shorten a link here..." name="" class="input input-default  lg:h-16 lg:rounded-lg lg:w-2/3   " id="input">
+
+                <div class="wrong-link hidden  " id="url-wrong">Wrong link</div>
+
+
+                <input type="button" value="Shorten it!" id="button" class="btn-blue rounded-sm  mt-3 lg:mt-0 lg:h-16  lg:rounded-lg lg:w-1/3 ">
+            </div>
+          
+            <div class=" hidden bg-white  rounded-md  mt-4  lg:max-w-6xl  lg:items-center lg:w-full lg:rounded-lg lg:px-1  lg:-translate-y-24 lg:mt-5 lg:hidden " id="single-output">
+
+                <div class="divide-y divide-neutral-bgGray lg:divide-none  lg:w-full lg:flex  lg:justify-between">
+                    <p class="output-default lg:text-left  lg:h-auto " id="output-default">
+                    ${def}
+                    </p>
+                    <p class="output-short lg:text-right" id="output-short">
+                    ${or}
+                    </p>
+                </div>
+        
+                <div class="px-3 pb-3  lg:py-4" >
+                    <button data-name="btn" class="btn-blue rounded-md lg:w-36"> Copy </button>
+                </div>
+            </div> 
+
+
+
+        </div>
+
+
+
+        <section class=" pt-20 ">
+            <div class="flex flex-col items-center mb-10 max-w-md mx-auto ">
+                <h2 class="title  text-2xl  lg:text-4xl    ">
+                    Advanced Statistics
+                </h2>
+                <p class="description-text lg:text-base lg:text-center  ">
+                    Track how your link are permoning across the web with our advanced statistics dashboard.
+                </p>
+            </div>
+
+            <div class="space-y-16  relative lg:flex lg:space-x-5   lg:justify-center  xl:space-x-10 ">
+
+                <div class="z-0 absolute w-2 bg-primary-cyan h-full transform  left-0 right-0 mx-auto lg:h-2 lg:w-full lg:max-w-2xl  lg:top-56  "></div>
+
+                <div class="card">
+                    <img src="/assets/img/icon-brand-recognition.svg" class="violet-icon" alt="">
+                    <h3 class="title text-lg lg:text-xl lg:block md:text-2xl ">
+                        Brand Recognition
+                    </h3>
+                    <p class="description-text px-6 mb-8 lg:leading-5  lg:text-sm ">
+                        Boost your brand recongnition with each click. Generic links don't mean a thing. Brande links
+                        help
+                        instil confidence in your content.
+                    </p>
+                </div>
+
+                <div class="card  lg:translate-y-10  ">
+                    <img src="/assets/img/icon-detailed-records.svg" class="violet-icon" alt="">
+                    <h3 class="title text-lg lg:text-xl  md:text-2xl  ">
+                        Detailed Records
+                    </h3>
+                    <p class="description-text px-6 mb-8 lg:leading-5 lg:text-sm  ">
+                        Gain insights into who is clicking your links. Knowing when and where people engage with your
+                        content helps inform better decisions.
+                    </p>
+                </div>
+
+                <div class="card lg:translate-y-20  ">
+                    <img src="/assets/img/icon-fully-customizable.svg" class="violet-icon" alt="">
+                    <h3 class="title text-lg lg:text-xl md:text-2xl   ">
+                        Fully Customizable
+                    </h3>
+                    <p class="description-text px-6 mb-8 lg:leading-5 lg:text-sm  ">
+                        Improve brand awareness and content discoverability through customizable links, supercharging
+                        audience engagement.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+
+    </div>
+
+    <section class="boost-section  lg:py-32">
+
+
+        <h2 class="text-white font-bold text-xl max-w-md mx-auto lg:text-4xl  ">
+            Boost your links today
+        </h2>
+        <button class="btn-blue  w-auto px-6 lg:text-lg lg:px-10 lg:py-4 lg:rounded-full lg:mt-5    ">Get started</button>
+
+    </section>
+    
+    <footer class="px-4 bg-neutral-darkviolet pt-10 flex flex-col justify-center items-center  text-sm lg:flex-row lg:justify-around   lg:items-start lg:pb-20 lg:text-base ">
+        <div>
+            <img src="/assets/img/logo-white.svg" class="w-28 lg:mt-10  lg:w-36 lg:mr-24  " alt="">
+        </div>
+
+        <div class="mt-10 text-center max-w-md mx-auto lg:mx-0 lg:text-left ">
+            <h4 class="text-white ">
+                Features
+            </h4>
+            <ul class=" text-neutral-grayViolet  mt-4 space-y-1 ">
+                <li><a href="#" class="hover:text-primary-cyan">Link Shortening</a></li>
+                <li><a href="#" class="hover:text-primary-cyan">Branded Links</a></li>
+                <li><a href="#" class="hover:text-primary-cyan">Analytics</a></li>
+            </ul>
+        </div>
+
+        <div class="mt-10 text-center max-w-md mx-auto lg:mx-0 lg:text-left">
+            <h4 class="text-white ">
+                Resources
+            </h4>
+            <ul class="text-neutral-grayViolet  mt-4 space-y-1  ">
+                <li><a href="#" class="hover:text-primary-cyan">Blog</a></li>
+                <li><a href="#" class="hover:text-primary-cyan">Developers</a></li>
+                <li><a href="#" class="hover:text-primary-cyan">Support</a></li>
+            </ul>
+        </div>
+
+        <div class="mt-10 text-center max-w-md mx-auto lg:mx-0 lg:text-left ">
+            <h4 class="text-white ">
+                Company
+            </h4>
+            <ul class="text-neutral-grayViolet  mt-4 space-y-1 lg:mr-16  ">
+                <li><a href="#" class="hover:text-primary-cyan">About</a> </li>
+                <li><a href="#" class="hover:text-primary-cyan">Our Team</a></li>
+                <li><a href="#" class="hover:text-primary-cyan">Careers</a></li>
+                <li><a href="#" class="hover:text-primary-cyan">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="mt-10 max-w-md mx-auto lg:mx-0 lg:text-left   ">
+            <ul class="space-x-5 flex mb-10 lg:space-x-7 ">
+                <li><a href="#"><img src="/assets/img/icon-facebook.svg" class="w-5 lg:w-7" alt="logo-facebook"></a></li>
+                <li><a href="#"><img src="/assets/img/icon-twitter.svg" class="w-6 lg:w-8" alt="logo-twitter"></a></li>
+                <li><a href="#"><img src="/assets/img/icon-pinterest.svg" class="w-5 lg:w-7" alt="logo-pinterest"></a></li>
+                <li><a href="#" ><img src="/assets/img/icon-instagram.svg" class="w-5 lg:w-7  " alt="logo-instagram"></a></li>
+            </ul>
+        </div>
+
+    </footer>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+   <script src="/assets/scripts/main.js" type="module"></script>
+
+</body>
+
+</html>

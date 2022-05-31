@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+      font-family: Poppins, sans-serif;
+    }
+    
+  }
+
+  
+  @layer components{
+
+    .btn-blue{
+       @apply bg-primary-cyan rounded-3xl py-2  w-full flex  justify-center font-bold text-sm tracking-wider text-white hover:cursor-pointer hover:bg-cyan-300   
+    } 
+    .nav{
+      @apply   z-10 absolute text-white divide-neutral-grayViolet  bg-primary-violet text-sm divide-y mt-4 px-4  
+      rounded-md py-8  font-medium left-0 right-0 mx-4
+    }
+    .description-text{
+        @apply mt-2 mb-4 text-neutral-grayViolet text-xs  text-center  lg:text-left 
+    }
+    .title{
+        @apply font-bold text-center text-neutral-darkBlue lg:text-left 
+    }
+    .input-default{
+      @apply outline-primary-violet placeholder-neutral-grayViolet 
+    }
+    .bad-link{
+     @apply  outline-primary-red  placeholder-primary-red  outline 
+    }
+    
+    .violet-icon{
+      @apply bg-primary-violet p-4  rounded-full transform -translate-y-9
+    }
+    .card{
+      @apply flex flex-col items-center bg-white rounded-md  z-30 transform translate-y-1 max-w-sm  mx-auto  lg:pb-10 lg:px-5   lg:min-w-card
+    }
+    .input{
+      @apply h-10 pl-3  w-full text-sm rounded-sm outline-offset-0 outline-2 input-default
+    }
+    .input-container{
+     @apply mt-24  bg-primary-violet p-5 -translate-y-14 transform bg-input_patern flex flex-col justify-center items-center rounded-lg
+    }
+    .output-default{
+      @apply h-8 px-3 text-sm flex items-center text-neutral-darkBlue mr-3 truncate  
+    }
+    .output-short{
+      @apply h-10 px-3 text-sm text-primary-cyan  flex items-center 
+    }
+    .boost-section{
+      @apply px-4  bg-primary-violet bg-boost_bg bg-cover  py-20 grid place-items-center gap-5 lg:bg-boost_desktop 
+    }
+
+
+    .new-link-container{
+      @apply bg-white  rounded-md mx-4 
+    }
+    .first-child{
+      @apply divide-y divide-neutral-bgGray 
+    }
+    .second-child{
+      @apply px-3 pb-3
+    }
+    .new-button{
+      @apply px-3 pb-3 
+    }
+    .wrong-link{
+      @apply text-primary-red text-xs self-start mt-1 font-mono lg:absolute lg:left-7  lg:bottom-3   lg:text-sm 
+    }
+    
+  }
